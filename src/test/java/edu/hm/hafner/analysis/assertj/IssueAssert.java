@@ -10,11 +10,11 @@ import edu.hm.hafner.analysis.Issue;
 import edu.hm.hafner.analysis.Priority;
 
 public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
-    public IssueAssert(Issue actual) {
+    public IssueAssert(final Issue actual) {
         super(actual, IssueAssert.class);
     }
 
-    public IssueAssert hasId(UUID id) {
+    public IssueAssert hasId(final UUID id) {
         isNotNull();
 
         if (!Objects.equals(actual.getId(), id)) {
@@ -23,7 +23,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasFileName(String fileName) {
+    public IssueAssert hasFileName(final String fileName) {
         isNotNull();
 
         if (!Objects.equals(actual.getFileName(), fileName)) {
@@ -32,7 +32,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasCategory(String category) {
+    public IssueAssert hasCategory(final String category) {
         isNotNull();
 
         if (!Objects.equals(actual.getCategory(), category)) {
@@ -41,7 +41,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasType(String type) {
+    public IssueAssert hasType(final String type) {
         isNotNull();
 
         if (!Objects.equals(actual.getType(), type)) {
@@ -50,7 +50,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasPriority(Priority priority) {
+    public IssueAssert hasPriority(final Priority priority) {
         isNotNull();
 
         if (!Objects.equals(actual.getPriority(), priority)) {
@@ -59,7 +59,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasMessage(String message) {
+    public IssueAssert hasMessage(final String message) {
         isNotNull();
 
         if (!Objects.equals(actual.getMessage(), message)) {
@@ -68,7 +68,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasDescription(String description) {
+    public IssueAssert hasDescription(final String description) {
         isNotNull();
 
         if (!Objects.equals(actual.getDescription(), description)) {
@@ -77,7 +77,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasLineStart(int lineStart) {
+    public IssueAssert hasLineStart(final int lineStart) {
         isNotNull();
 
         if (actual.getLineStart() != lineStart) {
@@ -86,7 +86,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasLineEnd(int lineEnd) {
+    public IssueAssert hasLineEnd(final int lineEnd) {
         isNotNull();
 
         if (actual.getLineEnd() != lineEnd) {
@@ -95,7 +95,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasColumnStart(int columnStart) {
+    public IssueAssert hasColumnStart(final int columnStart) {
         isNotNull();
 
         if (actual.getColumnStart() != columnStart) {
@@ -104,7 +104,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasColumnEnd(int columnEnd) {
+    public IssueAssert hasColumnEnd(final int columnEnd) {
         isNotNull();
 
         if (actual.getColumnEnd() != columnEnd) {
@@ -113,7 +113,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasPackageName(String packageName) {
+    public IssueAssert hasPackageName(final String packageName) {
         isNotNull();
 
         if (!Objects.equals(actual.getPackageName(), packageName)) {
@@ -122,7 +122,7 @@ public class IssueAssert extends AbstractAssert<IssueAssert, Issue> {
         return this;
     }
 
-    public IssueAssert hasFingerprint(String fingerprint) {
+    public IssueAssert hasFingerprint(final String fingerprint) {
         isNotNull();
 
         if (!Objects.equals(actual.getFingerprint(), fingerprint)) {
