@@ -2,7 +2,7 @@ package edu.hm.hafner.analysis;
 
 import org.junit.jupiter.api.Test;
 
-import static edu.hm.hafner.analysis.assertj.IssueAssert.*;
+import static edu.hm.hafner.analysis.assertj.IssueAssert.assertThat;
 
 /**
  * Unit test for {@link IssueBuilder}.
@@ -51,11 +51,11 @@ class IssueBuilderTest {
 
     @Test
     void testCopy() {
-        Issue issue = new IssueBuilder()
+        Issue copy = new IssueBuilder()
                 .copy(FILLED_ISSUE)
                 .build();
 
-        assertThat(issue).isNotSameAs(FILE_NAME);
-        assertThat(issue).isEqualTo(FILLED_ISSUE);
+        assertThat(copy).isNotSameAs(FILE_NAME);
+        assertThat(copy).isEqualTo(FILLED_ISSUE);
     }
 }
