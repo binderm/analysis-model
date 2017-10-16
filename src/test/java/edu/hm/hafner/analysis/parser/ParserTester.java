@@ -11,7 +11,7 @@ import edu.hm.hafner.analysis.Issue;
 import edu.hm.hafner.analysis.IssueBuilder;
 import edu.hm.hafner.analysis.Priority;
 import edu.hm.hafner.util.Ensure;
-import static edu.hm.hafner.analysis.assertj.IssueAssert.assertThat;
+import static edu.hm.hafner.analysis.assertj.IssueAssert.*;
 
 /**
  * Base class for parser tests. Provides an assertion test for warnings.
@@ -33,12 +33,12 @@ public abstract class ParserTester {
      * @param priority   the expected priority
      */
     protected void checkWarning(final Issue warning, final int lineNumber, final String message, final String fileName, final String category, final Priority priority) {
-        assertThat(warning).hasPriority(priority);
-        assertThat(warning).hasCategory(category);
-        assertThat(warning).hasLineStart(lineNumber);
-        assertThat(warning).hasLineEnd(lineNumber);
-        assertThat(warning).hasMessage(message);
-        assertThat(warning).hasFileName(fileName);
+        assertThat(warning).hasPriority(priority)
+                .hasCategory(category)
+                .hasLineStart(lineNumber)
+                .hasLineEnd(lineNumber)
+                .hasMessage(message)
+                .hasFileName(fileName);
     }
 
     /**
@@ -53,8 +53,13 @@ public abstract class ParserTester {
      * @param priority   the expected priority
      */
     protected void checkWarning(final Issue warning, final int lineNumber, final int column, final String message, final String fileName, final String category, final Priority priority) {
-        checkWarning(warning, lineNumber, message, fileName, category, priority);
-        assertThat(warning).hasColumnStart(column);
+        assertThat(warning).hasPriority(priority)
+                .hasCategory(category)
+                .hasLineStart(lineNumber)
+                .hasLineEnd(lineNumber)
+                .hasMessage(message)
+                .hasFileName(fileName)
+                .hasColumnStart(column);
     }
 
     /**
@@ -69,8 +74,13 @@ public abstract class ParserTester {
      * @param priority   the expected priority
      */
     protected void checkWarning(final Issue warning, final int lineNumber, final String message, final String fileName, final String type, final String category, final Priority priority) {
-        checkWarning(warning, lineNumber, message, fileName, category, priority);
-        assertThat(warning).hasType(type);
+        assertThat(warning).hasPriority(priority)
+                .hasCategory(category)
+                .hasLineStart(lineNumber)
+                .hasLineEnd(lineNumber)
+                .hasMessage(message)
+                .hasFileName(fileName)
+                .hasType(type);
     }
 
     /**
@@ -86,8 +96,14 @@ public abstract class ParserTester {
      * @param priority   the expected priority
      */
     protected void checkWarning(final Issue warning, final int lineNumber, final int column, final String message, final String fileName, final String type, final String category, final Priority priority) { // NOCHECKSTYLE
-        checkWarning(warning, lineNumber, column, message, fileName, category, priority);
-        assertThat(warning).hasType(type);
+        assertThat(warning).hasPriority(priority)
+                .hasCategory(category)
+                .hasLineStart(lineNumber)
+                .hasLineEnd(lineNumber)
+                .hasMessage(message)
+                .hasFileName(fileName)
+                .hasColumnStart(column)
+                .hasType(type);
     }
 
     /**
