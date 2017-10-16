@@ -9,7 +9,6 @@ import edu.hm.hafner.analysis.AbstractParser;
 import edu.hm.hafner.analysis.Issue;
 import edu.hm.hafner.analysis.Issues;
 import edu.hm.hafner.analysis.Priority;
-import edu.hm.hafner.analysis.assertj.IssueAssert;
 import static edu.hm.hafner.analysis.assertj.IssueAssert.assertThat;
 import static edu.hm.hafner.analysis.assertj.IssuesAssert.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
